@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1018011521280",
+    "firebase_url": "https://building-drawings.firebaseio.com",
+    "project_id": "building-drawings",
+    "storage_bucket": "building-drawings.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018011521280:android:141c8dad8c46a0d08923e5",
+        "android_client_info": {
+          "package_name": "com.SAR.buildingdrawings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018011521280-0vbn2m41rmaktv6acqvfif2kmg335kl7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.SAR.buildingdrawings",
+            "certificate_hash": "e973cd2e07a5e16be3856bb731afa1ede828b6ce"
+          }
+        },
+        {
+          "client_id": "1018011521280-f8nbql5pgmdlnep1el5ka7ipbnjjj9em.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0gWsLD6qSs85e7zEd-7BA4s0Aisa1Hns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018011521280-f8nbql5pgmdlnep1el5ka7ipbnjjj9em.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
