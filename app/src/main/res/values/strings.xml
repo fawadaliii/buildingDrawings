@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Building Drawings</string>
+    <string name="home">Home</string>
+    <string name="account">Account</string>
+    <string name="build_house">Build House</string>
+    <string name="estimation">Estimation</string>
+    <string name="_3d_buildings">3D Buildings</string>
+</resources>

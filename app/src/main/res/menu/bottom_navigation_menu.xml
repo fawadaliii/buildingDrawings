@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_nav"
+        android:title="@string/home"
+        android:icon="@drawable/home"
+        android:orderInCategory="1"/>
+
+    <item
+        android:id="@+id/build_house_nav"
+        android:title="@string/build_house"
+        android:icon="@drawable/build"
+        android:orderInCategory="2"/>
+
+    <item
+        android:id="@+id/estimation_nav"
+        android:title="@string/estimation"
+        android:icon="@drawable/estimation"
+        android:orderInCategory="3"/>
+
+    <item
+        android:id="@+id/_3d_buildings_nav"
+        android:title="@string/_3d_buildings"
+        android:icon="@drawable/_3d_buildings"
+        android:orderInCategory="4"/>
+
+    <item
+        android:id="@+id/account_nav"
+        android:title="@string/account"
+        android:icon="@drawable/account"
+        android:orderInCategory="5"/>
+
+
+
+</menu>
