@@ -82,9 +82,9 @@ public class home extends AppCompatActivity implements BottomNavigationView.OnNa
 
             case R.id.account_nav:
                 //
-//                Intent intent = new Intent(home.this, .class);
-//                startActivity(intent);
-//                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                Intent intent = new Intent(home.this, signup.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
 
 
