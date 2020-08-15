@@ -7,13 +7,20 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.SAR.buildingdrawings.models.common;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 
 public class home extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     private Toolbar toolbar;
     private BottomNavigationView bottomNavigationView;
+    private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +37,12 @@ public class home extends AppCompatActivity implements BottomNavigationView.OnNa
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Building Drawings");
+
+//        if (common.currentUser != null){
+//            Toast.makeText(getApplicationContext(),""+ common.currentUser.getName()
+//                    +common.currentUser.getPhone()+common.currentUser.getType() +common.currentUser.getEmail(),Toast.LENGTH_SHORT).show();
+//        }
+
     }
 
     @Override
@@ -57,6 +70,9 @@ public class home extends AppCompatActivity implements BottomNavigationView.OnNa
 
             case R.id.home_nav:
                 //
+//                Intent intent2 = new Intent(home.this, home.class);
+//                startActivity(intent2);
+//                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
 
             case R.id.build_house_nav:
@@ -82,7 +98,7 @@ public class home extends AppCompatActivity implements BottomNavigationView.OnNa
 
             case R.id.account_nav:
                 //
-                Intent intent = new Intent(home.this, signup.class);
+                Intent intent = new Intent(home.this, signin.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;

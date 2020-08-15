@@ -120,16 +120,13 @@ public class signup extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-                                        // Sign in success, update UI with the signed-in user's information
                                         Log.d(TAG, "createUserWithEmail:success");
                                         FirebaseUser user = mAuth.getCurrentUser();
                                         addUserdetails(user);
                                     } else {
-                                        // If sign in fails, display a message to the user.
                                         Log.w(TAG, "createUserWithEmail:failure", task.getException());
                                         Toast.makeText(signup.this, "Authentication failed. " +task.getException().getMessage(),
                                                 Toast.LENGTH_SHORT).show();
-//                                        updateUI(null);
                                     }
                                 }
                             });
@@ -145,7 +142,7 @@ public class signup extends AppCompatActivity {
 
     }
 
-    private void addUserdetails(FirebaseUser user1){
+    private void addUserdetails(final FirebaseUser user1){
         String userId = user1.getUid();
 
 //        user USER = new user();
@@ -158,6 +155,30 @@ public class signup extends AppCompatActivity {
         mDatabase.child("users").child(userId).child("phone").setValue(phone.getText().toString());
         mDatabase.child("users").child(userId).child("type").setValue("user");
 //        mDatabase.child(userId).setValue(USER);
+        user1.sendEmailVerification()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+
+                        if (task.isSuccessful()) {
+                            Toast.makeText(signup.this,
+                                    "Verification email sent to " + user1.getEmail(),
+                                    Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(signup.this,
+//                                    ""+user1.isEmailVerified(),
+//                                    Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(signup.this, signin.class);
+                            startActivity(intent);
+                            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                            finish();
+                        } else {
+                            Log.e(TAG, "sendEmailVerification", task.getException());
+                            Toast.makeText(signup.this,
+                                    "Failed to send verification email. " + task.getException().getMessage(),
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     @Override

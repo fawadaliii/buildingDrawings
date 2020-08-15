@@ -7,6 +7,7 @@ public class user {
     private String id;
     private String type;
     private String photo;
+    boolean emailVerified;
 
     public user() {
     }
@@ -66,5 +67,13 @@ public class user {
 
     public void setPhoto(String photo) {
         this.photo = photo;
+    }
+
+    public boolean isEmailVerified() {
+        return emailVerified;
+    }
+
+    public void setEmailVerified(boolean emailVerified) {
+        this.emailVerified = emailVerified;
     }
 }
