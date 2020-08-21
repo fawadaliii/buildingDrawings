@@ -1,4 +1,4 @@
-package com.SAR.buildingdrawings;
+package com.SAR.buildingdrawing;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -12,8 +12,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
-import com.SAR.buildingdrawings.models.common;
-import com.SAR.buildingdrawings.models.user;
+import com.SAR.buildingdrawing.models.common;
+import com.SAR.buildingdrawing.models.user;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -42,21 +42,22 @@ public class splashScreen extends AppCompatActivity {
         final DatabaseReference users_table = FirebaseDatabase.getInstance().getReference("users");
 
         if(isOnline()) {
+            if(user1 != null){
+                if(user1.getUid() != null && user1.isEmailVerified()){
+                    users_table.child(user1.getUid()).addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            user USER = dataSnapshot.getValue(user.class);
+                            common.currentUser = USER;
+                            users_table.removeEventListener(this);
+                        }
 
-            if(user1.getUid() != null && user1.isEmailVerified()){
-                users_table.child(user1.getUid()).addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        user USER = dataSnapshot.getValue(user.class);
-                        common.currentUser = USER;
-                        users_table.removeEventListener(this);
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        System.out.println("The read failed: " + databaseError.getCode());
-                    }
-                });
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                            System.out.println("The read failed: " + databaseError.getCode());
+                        }
+                    });
+                }
             }
         }
         else{

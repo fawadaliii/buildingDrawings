@@ -19,4 +19,8 @@
     <string name="name">Name</string>
     <string name="sign_up">Sign up</string>
     <string name="suav">Sign up as vendor</string>
+    <string name="view_and_edit_profile"><![CDATA[View and Edit Profile ->]]></string>
+    <string name="name_of_user">Name of User</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="SVC">Select Vendor Category</string>
 </resources>

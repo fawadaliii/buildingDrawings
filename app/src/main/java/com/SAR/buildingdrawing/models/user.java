@@ -1,4 +1,4 @@
-package com.SAR.buildingdrawings.models;
+package com.SAR.buildingdrawing.models;
 
 public class user {
     private String name;
@@ -7,18 +7,21 @@ public class user {
     private String id;
     private String type;
     private String photo;
+    private String vendor_category;
+
     boolean emailVerified;
 
     public user() {
     }
 
-    public user(String name, String email, String phone, String id, String type, String photo) {
+    public user(String name, String email, String phone, String id, String type, String photo, String vendor_category) {
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.id = id;
         this.type = type;
         this.photo = photo;
+        this.vendor_category = vendor_category;
     }
 
     public String getName() {
@@ -75,5 +78,13 @@ public class user {
 
     public void setEmailVerified(boolean emailVerified) {
         this.emailVerified = emailVerified;
+    }
+
+    public String getVendor_category() {
+        return vendor_category;
+    }
+
+    public void setVendor_category(String vendor_category) {
+        this.vendor_category = vendor_category;
     }
 }

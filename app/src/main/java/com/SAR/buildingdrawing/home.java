@@ -1,4 +1,4 @@
-package com.SAR.buildingdrawings;
+package com.SAR.buildingdrawing;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,12 +7,10 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-import com.SAR.buildingdrawings.models.common;
+import com.SAR.buildingdrawing.models.common;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 
 public class home extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
@@ -98,9 +96,16 @@ public class home extends AppCompatActivity implements BottomNavigationView.OnNa
 
             case R.id.account_nav:
                 //
-                Intent intent = new Intent(home.this, signin.class);
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                if (common.currentUser == null){
+                    Intent intent = new Intent(home.this, signin.class);
+                    startActivity(intent);
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                }
+                else{
+                    Intent intent = new Intent(home.this, account.class);
+                    startActivity(intent);
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                }
                 return true;
 
 

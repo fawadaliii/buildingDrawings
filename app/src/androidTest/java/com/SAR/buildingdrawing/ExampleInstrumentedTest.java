@@ -1,4 +1,4 @@
-package com.SAR.buildingdrawings;
+package com.SAR.buildingdrawing;
 
 import android.content.Context;
 

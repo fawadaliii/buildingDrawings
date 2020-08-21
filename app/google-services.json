@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "1018011521280",
-    "firebase_url": "https://building-drawings.firebaseio.com",
-    "project_id": "building-drawings",
-    "storage_bucket": "building-drawings.appspot.com"
+    "project_number": "925883003094",
+    "firebase_url": "https://building-drawings-eb690.firebaseio.com",
+    "project_id": "building-drawings-eb690",
+    "storage_bucket": "building-drawings-eb690.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1018011521280:android:141c8dad8c46a0d08923e5",
+        "mobilesdk_app_id": "1:925883003094:android:23ab597acdbbd7c7b1d977",
         "android_client_info": {
-          "package_name": "com.SAR.buildingdrawings"
+          "package_name": "com.SAR.buildingdrawing"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1018011521280-0vbn2m41rmaktv6acqvfif2kmg335kl7.apps.googleusercontent.com",
+          "client_id": "925883003094-idc6l045j6h8a9mrgkt0n0brdo3cb87g.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.SAR.buildingdrawings",
+            "package_name": "com.SAR.buildingdrawing",
             "certificate_hash": "e973cd2e07a5e16be3856bb731afa1ede828b6ce"
           }
         },
         {
-          "client_id": "1018011521280-f8nbql5pgmdlnep1el5ka7ipbnjjj9em.apps.googleusercontent.com",
+          "client_id": "925883003094-bibq97b2hksh0aabrjcge4itmjmlgav6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC0gWsLD6qSs85e7zEd-7BA4s0Aisa1Hns"
+          "current_key": "AIzaSyDZ8rLPFU96G5V2-HS4P1ybVnN0jdD-YFI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1018011521280-f8nbql5pgmdlnep1el5ka7ipbnjjj9em.apps.googleusercontent.com",
+              "client_id": "925883003094-bibq97b2hksh0aabrjcge4itmjmlgav6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

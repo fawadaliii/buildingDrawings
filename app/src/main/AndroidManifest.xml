@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.SAR.buildingdrawings">
+    package="com.SAR.buildingdrawing">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -17,13 +17,15 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".editProfile"></activity>
+        <activity android:name="com.SAR.buildingdrawing.vendorSignup"></activity>
+        <activity android:name="com.SAR.buildingdrawing.account" />
+        <activity android:name="com.SAR.buildingdrawing.editProfile" />
         <activity
-            android:name=".signin"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".signup" />
-        <activity android:name=".home" />
-        <activity android:name=".splashScreen">
+            android:name="com.SAR.buildingdrawing.signin"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.SAR.buildingdrawing.signup" />
+        <activity android:name="com.SAR.buildingdrawing.home" />
+        <activity android:name="com.SAR.buildingdrawing.splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

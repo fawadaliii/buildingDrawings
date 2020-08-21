@@ -1,4 +1,4 @@
-package com.SAR.buildingdrawings;
+package com.SAR.buildingdrawing;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,8 +24,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.SAR.buildingdrawings.models.common;
-import com.SAR.buildingdrawings.models.user;
+import com.SAR.buildingdrawing.models.common;
+import com.SAR.buildingdrawing.models.user;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -154,7 +154,7 @@ public class signin extends AppCompatActivity {
                                     }
                                     else{
                                         mAuth.sendPasswordResetEmail(emailEditText.getText().toString().replaceAll(" ",""))
-                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                .addOnCompleteListener( new OnCompleteListener<Void>() {
                                                     @Override
                                                     public void onComplete(@NonNull Task<Void> task) {
                                                         if (task.isSuccessful()) {
