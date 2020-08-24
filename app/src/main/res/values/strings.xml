@@ -23,4 +23,6 @@
     <string name="name_of_user">Name of User</string>
     <string name="sign_out">Sign Out</string>
     <string name="SVC">Select Vendor Category</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="vendor_category">Vendor Category</string>
 </resources>

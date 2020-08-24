@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.SAR.buildingdrawing.models.common;
+import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -67,6 +68,20 @@ public class account extends AppCompatActivity implements BottomNavigationView.O
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
+        if(isOnline()) {
+            if ( common.currentUser.getPhoto() != null){
+                if(!common.currentUser.getPhoto().contentEquals("")){
+                    Glide.with(getApplicationContext())
+                            .asBitmap()
+                            .load(common.currentUser.getPhoto())
+                            .into(user_image);
+                }
+            }
+        }
+        else{
+            Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
+        }
+
         signoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,6 +97,15 @@ public class account extends AppCompatActivity implements BottomNavigationView.O
                 else{
                     Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        viewAndEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(account.this, editProfile.class);
+                startActivity(intent1);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
     }
