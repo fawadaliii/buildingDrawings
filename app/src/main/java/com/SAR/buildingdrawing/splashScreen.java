@@ -51,7 +51,6 @@ public class splashScreen extends AppCompatActivity {
                             common.currentUser = USER;
                             users_table.removeEventListener(this);
                         }
-
                         @Override
                         public void onCancelled(DatabaseError databaseError) {
                             System.out.println("The read failed: " + databaseError.getCode());

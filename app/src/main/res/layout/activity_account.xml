@@ -81,9 +81,32 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/repair_and_maintenance"
+                android:id="@+id/repair_and_maintainanace"
+                android:layout_below="@id/space1"
+                android:textSize="12pt"
+                android:textColor="@color/colorBackgroundBottomNavigation"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/repair"
+                android:drawableTint="@color/colorBackgroundBottomNavigation"
+                android:drawablePadding="4pt"
+                android:layout_marginHorizontal="4pt"
+                android:layout_marginTop="6pt"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5pt"
+                android:background="#f2f2f2"
+                android:id="@+id/space4"
+                android:layout_below="@+id/repair_and_maintainanace"
+                android:layout_marginTop="6pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/sign_out"
                 android:id="@+id/signoutBtn"
-                android:layout_below="@id/space1"
+                android:layout_below="@id/space4"
                 android:textSize="12pt"
                 android:textColor="@color/colorBackgroundBottomNavigation"
                 android:textStyle="bold"
@@ -100,29 +123,6 @@
                 android:id="@+id/space31"
                 android:layout_below="@+id/signoutBtn"
                 android:layout_marginTop="6pt"/>
-
-<!--            <androidx.appcompat.widget.AppCompatTextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/notifications"-->
-<!--                android:id="@+id/notificationsBtn"-->
-<!--                android:layout_below="@id/space31"-->
-<!--                android:textSize="12pt"-->
-<!--                android:textColor="@color/colorBackgroundBottomNavigation"-->
-<!--                android:textStyle="bold"-->
-<!--                android:drawableStart="@drawable/notifictions"-->
-<!--                android:drawableTint="@color/colorBackgroundBottomNavigation"-->
-<!--                android:drawablePadding="4pt"-->
-<!--                android:layout_marginHorizontal="4pt"-->
-<!--                android:layout_marginTop="6pt"/>-->
-
-<!--            <RelativeLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="0.5pt"-->
-<!--                android:background="#f2f2f2"-->
-<!--                android:id="@+id/space4"-->
-<!--                android:layout_below="@+id/notificationsBtn"-->
-<!--                android:layout_marginTop="6pt"/>-->
 
 <!--            <androidx.appcompat.widget.AppCompatTextView-->
 <!--                android:layout_width="wrap_content"-->

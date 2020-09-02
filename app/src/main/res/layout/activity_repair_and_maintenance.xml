@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".repairAndMaintenance">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_below="@id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/filter_btn"
+        android:layout_alignParentLeft="true"
+        android:queryHint="@string/search"
+        android:iconifiedByDefault="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/filter_btn"
+        app:cardCornerRadius="0pt"
+        app:cardMaxElevation="2.2pt"
+        app:cardElevation="2pt"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="3pt"
+        android:layout_marginRight="3pt"
+        android:layout_marginLeft="1pt">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/filter_icon"
+            android:src="@drawable/filter"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerViewVendors"
+        android:layout_below="@id/searchView"
+        android:layout_above="@id/bottomNavigation"
+        android:background="#f0f0f0"
+        android:paddingHorizontal="4pt"
+        android:paddingVertical="1pt"
+        android:clipToPadding="false"
+        android:orientation="vertical"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigation"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/bottom_nav_icon_color_selector"
+        app:menu="@menu/bottom_navigation_menu"
+        app:theme="@style/BottomNavigationTheme"
+        app:itemBackground="@color/colorBackgroundBottomNavigation"
+        android:backgroundTint="@color/colorBackgroundBottomNavigation"/>
+
+</RelativeLayout>

@@ -38,6 +38,7 @@ public class account extends AppCompatActivity implements BottomNavigationView.O
     private CircleImageView user_image;
 
     private AppCompatTextView signoutBtn;
+    private AppCompatTextView repair_and_maintainanace;
 
 
     @Override
@@ -63,6 +64,7 @@ public class account extends AppCompatActivity implements BottomNavigationView.O
         user_name.setText(common.currentUser.getName());
 
         signoutBtn = findViewById(R.id.signoutBtn);
+        repair_and_maintainanace = findViewById(R.id.repair_and_maintainanace);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -97,6 +99,15 @@ public class account extends AppCompatActivity implements BottomNavigationView.O
                 else{
                     Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        repair_and_maintainanace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(account.this, repairAndMaintenance.class);
+                startActivity(intent1);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
 

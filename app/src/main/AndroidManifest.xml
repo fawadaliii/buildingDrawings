@@ -17,15 +17,16 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.SAR.buildingdrawing.vendorSignup"></activity>
-        <activity android:name="com.SAR.buildingdrawing.account" />
-        <activity android:name="com.SAR.buildingdrawing.editProfile" />
+        <activity android:name=".repairAndMaintenance"></activity>
+        <activity android:name=".vendorSignup" />
+        <activity android:name=".account" />
+        <activity android:name=".editProfile" />
         <activity
-            android:name="com.SAR.buildingdrawing.signin"
+            android:name=".signin"
             android:screenOrientation="portrait" />
-        <activity android:name="com.SAR.buildingdrawing.signup" />
-        <activity android:name="com.SAR.buildingdrawing.home" />
-        <activity android:name="com.SAR.buildingdrawing.splashScreen">
+        <activity android:name=".signup" />
+        <activity android:name=".home" />
+        <activity android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
