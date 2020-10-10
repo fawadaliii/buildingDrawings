@@ -10,44 +10,37 @@ import android.view.MenuItem;
 
 import com.SAR.buildingdrawing.models.common;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
 
-public class home extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+public class estimation extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     private Toolbar toolbar;
     private BottomNavigationView bottomNavigationView;
-    private FirebaseAuth mAuth;
-    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_estimation);
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         android.view.Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(0);
+        MenuItem menuItem = menu.getItem(2);
         menuItem.setChecked(true);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Building Drawings");
-
-//        if (common.currentUser != null){
-//            Toast.makeText(getApplicationContext(),""+ common.currentUser.getName()
-//                    +common.currentUser.getPhone()+common.currentUser.getType() +common.currentUser.getEmail(),Toast.LENGTH_SHORT).show();
-//        }
-
+        getSupportActionBar().setTitle("Estimation");
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                moveTaskToBack(true);
+                Intent intent2 = new Intent(estimation.this, home.class);
+                startActivity(intent2);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                finish();
                 return true;
 
             default:
@@ -57,7 +50,10 @@ public class home extends AppCompatActivity implements BottomNavigationView.OnNa
 
     @Override
     public void onBackPressed() {
-        moveTaskToBack(true);
+        Intent intent2 = new Intent(estimation.this, home.class);
+        startActivity(intent2);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        finish();
     }
 
     @Override
@@ -68,9 +64,9 @@ public class home extends AppCompatActivity implements BottomNavigationView.OnNa
 
             case R.id.home_nav:
                 //
-//                Intent intent2 = new Intent(home.this, home.class);
-//                startActivity(intent2);
-//                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                Intent intent2 = new Intent(estimation.this, home.class);
+                startActivity(intent2);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
 
             case R.id.build_house_nav:
@@ -82,9 +78,9 @@ public class home extends AppCompatActivity implements BottomNavigationView.OnNa
 
             case R.id.estimation_nav:
                 //
-                Intent intent3 = new Intent(home.this, estimation.class);
-                startActivity(intent3);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+//                Intent intent3 = new Intent(home.this, estimation.class);
+//                startActivity(intent3);
+//                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
 
             case R.id._3d_buildings_nav:
@@ -97,12 +93,12 @@ public class home extends AppCompatActivity implements BottomNavigationView.OnNa
             case R.id.account_nav:
                 //
                 if (common.currentUser == null){
-                    Intent intent = new Intent(home.this, signin.class);
+                    Intent intent = new Intent(estimation.this, signin.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 }
                 else{
-                    Intent intent = new Intent(home.this, account.class);
+                    Intent intent = new Intent(estimation.this, account.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 }

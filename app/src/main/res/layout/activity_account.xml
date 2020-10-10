@@ -104,9 +104,56 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/contact_us"
+                android:id="@+id/contactBtn"
+                android:layout_below="@id/space4"
+                android:textSize="12pt"
+                android:textColor="@color/colorBackgroundBottomNavigation"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/contact"
+                android:drawableTint="@color/colorBackgroundBottomNavigation"
+                android:drawablePadding="4pt"
+                android:layout_marginHorizontal="4pt"
+                android:layout_marginTop="6pt"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5pt"
+                android:background="#f2f2f2"
+                android:id="@+id/space5"
+                android:layout_below="@+id/contactBtn"
+                android:layout_marginTop="6pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rate_app"
+                android:id="@+id/rateBtn"
+                android:layout_below="@id/space5"
+                android:textSize="12pt"
+                android:textColor="@color/colorBackgroundBottomNavigation"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/rate"
+                android:drawableTint="@color/colorBackgroundBottomNavigation"
+                android:drawablePadding="4pt"
+                android:layout_marginHorizontal="4pt"
+                android:layout_marginTop="6pt"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5pt"
+                android:background="#f2f2f2"
+                android:id="@+id/space7"
+                android:layout_below="@+id/rateBtn"
+                android:layout_marginTop="6pt"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/sign_out"
                 android:id="@+id/signoutBtn"
-                android:layout_below="@id/space4"
+                android:layout_below="@id/space7"
                 android:textSize="12pt"
                 android:textColor="@color/colorBackgroundBottomNavigation"
                 android:textStyle="bold"
@@ -124,28 +171,6 @@
                 android:layout_below="@+id/signoutBtn"
                 android:layout_marginTop="6pt"/>
 
-<!--            <androidx.appcompat.widget.AppCompatTextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/contact_us"-->
-<!--                android:id="@+id/contactBtn"-->
-<!--                android:layout_below="@id/space4"-->
-<!--                android:textSize="12pt"-->
-<!--                android:textColor="@color/colorBackgroundBottomNavigation"-->
-<!--                android:textStyle="bold"-->
-<!--                android:drawableStart="@drawable/contact"-->
-<!--                android:drawableTint="@color/colorBackgroundBottomNavigation"-->
-<!--                android:drawablePadding="4pt"-->
-<!--                android:layout_marginHorizontal="4pt"-->
-<!--                android:layout_marginTop="6pt"/>-->
-
-<!--            <RelativeLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="0.5pt"-->
-<!--                android:background="#f2f2f2"-->
-<!--                android:id="@+id/space5"-->
-<!--                android:layout_below="@+id/contactBtn"-->
-<!--                android:layout_marginTop="6pt"/>-->
 
 <!--            <androidx.appcompat.widget.AppCompatTextView-->
 <!--                android:layout_width="wrap_content"-->
@@ -170,28 +195,7 @@
 <!--                android:layout_below="@+id/helpAndGuidelineBtn"-->
 <!--                android:layout_marginTop="6pt"/>-->
 
-<!--            <androidx.appcompat.widget.AppCompatTextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/rate_app"-->
-<!--                android:id="@+id/rateBtn"-->
-<!--                android:layout_below="@id/space6"-->
-<!--                android:textSize="12pt"-->
-<!--                android:textColor="@color/colorBackgroundBottomNavigation"-->
-<!--                android:textStyle="bold"-->
-<!--                android:drawableStart="@drawable/rate"-->
-<!--                android:drawableTint="@color/colorBackgroundBottomNavigation"-->
-<!--                android:drawablePadding="4pt"-->
-<!--                android:layout_marginHorizontal="4pt"-->
-<!--                android:layout_marginTop="6pt"/>-->
 
-<!--            <RelativeLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="0.5pt"-->
-<!--                android:background="#f2f2f2"-->
-<!--                android:id="@+id/space7"-->
-<!--                android:layout_below="@+id/rateBtn"-->
-<!--                android:layout_marginTop="6pt"/>-->
 
         </RelativeLayout>
 

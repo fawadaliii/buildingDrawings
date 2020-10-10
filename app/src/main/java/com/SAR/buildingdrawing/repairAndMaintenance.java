@@ -2,6 +2,7 @@ package com.SAR.buildingdrawing;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -47,6 +48,8 @@ public class repairAndMaintenance extends AppCompatActivity implements BottomNav
 
     private SearchView searchView;
 
+    private AppCompatImageView filter_icon;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +74,8 @@ public class repairAndMaintenance extends AppCompatActivity implements BottomNav
         final DatabaseReference users_table = FirebaseDatabase.getInstance().getReference("users");
 
         searchView = findViewById(R.id.searchView);
+
+        filter_icon = findViewById(R.id.filter_icon);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -113,28 +118,63 @@ public class repairAndMaintenance extends AppCompatActivity implements BottomNav
             }
         });
 
+        filter_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(repairAndMaintenance.this, filter.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+            }
+        });
+
         if(isOnline()) {
             mDialog.setMessage("Please wait...");
             mDialog.show();
 
-            users_table.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    for(DataSnapshot dataSnapshot1 :dataSnapshot.getChildren()) {
-                        user USER = dataSnapshot1.getValue(user.class);
-                        if (USER.getType().contentEquals("vendor")){
-                            vendorsList.add(USER);
+            final Bundle extras = getIntent().getExtras();
+            if(extras!= null){
+                ArrayList<String> allFilters = extras.getStringArrayList("allFilters");
+                users_table.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for(DataSnapshot dataSnapshot1 :dataSnapshot.getChildren()) {
+                            user USER = dataSnapshot1.getValue(user.class);
+                            if (USER.getType().contentEquals("vendor")){
+                                if (USER.getVendor_category().contentEquals(extras.getString("Filter"))){
+                                    vendorsList.add(USER);
+                                }
+                            }
                         }
+                        initRecyclerView();
+                        users_table.removeEventListener(this);
                     }
-                    initRecyclerView();
-                    users_table.removeEventListener(this);
-                }
 
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                    System.out.println("The read failed: " + databaseError.getCode());
-                }
-            });
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        System.out.println("The read failed: " + databaseError.getCode());
+                    }
+                });
+            }
+            else{
+                users_table.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for(DataSnapshot dataSnapshot1 :dataSnapshot.getChildren()) {
+                            user USER = dataSnapshot1.getValue(user.class);
+                            if (USER.getType().contentEquals("vendor")){
+                                vendorsList.add(USER);
+                            }
+                        }
+                        initRecyclerView();
+                        users_table.removeEventListener(this);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        System.out.println("The read failed: " + databaseError.getCode());
+                    }
+                });
+            }
         }
         else{
             Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();

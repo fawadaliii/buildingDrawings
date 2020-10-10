@@ -28,4 +28,24 @@
     <string name="repair_and_maintenance">Repair and Maintenance</string>
     <string name="search">Search</string>
     <string name="name_of_vendor">Name of Vendor</string>
+    <string name="cui_park_road_islamabad">CUI, Park Road Islamabad.</string>
+    <string name="apply">Apply</string>
+    <string name="rate_app">Rate App</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="address">Address</string>
+    <string name="_92_335_5930911">+92 335 5930911</string>
+    <string name="message_us">Message us</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_email">Your Email</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="bricks_estimate">Bricks Estimate</string>
+    <string name="paint_estimate">Paint Estimate</string>
+    <string name="lanter_estimate">Lanter Estimate</string>
+    <string name="beam_estimate">Beam Estimate</string>
+    <string name="floor_tiles">Floor Tiles</string>
+    <string name="wall_tiles">Wall Tiles</string>
+    <string name="plaster_ceiling">Plaster Ceiling</string>
+    <string name="plaster_wall">Plaster Wall</string>
 </resources>

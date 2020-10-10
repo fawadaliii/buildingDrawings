@@ -39,6 +39,7 @@ public class account extends AppCompatActivity implements BottomNavigationView.O
 
     private AppCompatTextView signoutBtn;
     private AppCompatTextView repair_and_maintainanace;
+    private AppCompatTextView contactBtn;
 
 
     @Override
@@ -65,6 +66,7 @@ public class account extends AppCompatActivity implements BottomNavigationView.O
 
         signoutBtn = findViewById(R.id.signoutBtn);
         repair_and_maintainanace = findViewById(R.id.repair_and_maintainanace);
+        contactBtn = findViewById(R.id.contactBtn);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -119,6 +121,16 @@ public class account extends AppCompatActivity implements BottomNavigationView.O
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
+
+        contactBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(account.this, contactUs.class);
+                startActivity(intent1);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            }
+        });
+
     }
 
     @Override
@@ -165,9 +177,9 @@ public class account extends AppCompatActivity implements BottomNavigationView.O
 
             case R.id.estimation_nav:
                 //
-//                Intent intent3 = new Intent(home.this, .class);
-//                startActivity(intent3);
-//                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                Intent intent3 = new Intent(account.this, estimation.class);
+                startActivity(intent3);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
 
             case R.id._3d_buildings_nav:
