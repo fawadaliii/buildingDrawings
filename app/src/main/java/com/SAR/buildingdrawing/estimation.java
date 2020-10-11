@@ -2,12 +2,16 @@ package com.SAR.buildingdrawing;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
+import com.SAR.buildingdrawing.estimates.bricksEstimate;
+import com.SAR.buildingdrawing.estimates.paintEstimate;
 import com.SAR.buildingdrawing.models.common;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -15,6 +19,16 @@ public class estimation extends AppCompatActivity implements BottomNavigationVie
 
     private Toolbar toolbar;
     private BottomNavigationView bottomNavigationView;
+
+    private AppCompatTextView bricksEstimate;
+    private AppCompatTextView paintEstimate;
+    private AppCompatTextView lanterEstimate;
+    private AppCompatTextView beamEstimate;
+    private AppCompatTextView floorTilesEstimate;
+    private AppCompatTextView wallTilesEstimate;
+    private AppCompatTextView plasterCeilingEstimate;
+    private AppCompatTextView plasterWallEstimate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +45,77 @@ public class estimation extends AppCompatActivity implements BottomNavigationVie
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Estimation");
+
+        bricksEstimate = findViewById(R.id.bricksEstimate);
+        paintEstimate = findViewById(R.id.paintEstimate);
+        lanterEstimate = findViewById(R.id.lanterEstimate);
+        beamEstimate = findViewById(R.id.beamEstimate);
+        floorTilesEstimate = findViewById(R.id.floorTilesEstimate);
+        wallTilesEstimate = findViewById(R.id.wallTilesEstimate);
+        plasterCeilingEstimate = findViewById(R.id.plasterCeilingEstimate);
+        plasterWallEstimate = findViewById(R.id.plasterWallEstimate);
+
+        bricksEstimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(estimation.this, bricksEstimate.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            }
+        });
+
+        paintEstimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(estimation.this, paintEstimate.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            }
+        });
+
+        lanterEstimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        beamEstimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        floorTilesEstimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        wallTilesEstimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        plasterCeilingEstimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        plasterWallEstimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
     }
 
     @Override
