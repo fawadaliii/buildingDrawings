@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.SAR.buildingdrawing.estimates.beamEstimate;
 import com.SAR.buildingdrawing.estimates.bricksEstimate;
+import com.SAR.buildingdrawing.estimates.lanterEstimate;
 import com.SAR.buildingdrawing.estimates.paintEstimate;
 import com.SAR.buildingdrawing.models.common;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -76,14 +78,18 @@ public class estimation extends AppCompatActivity implements BottomNavigationVie
         lanterEstimate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(estimation.this, lanterEstimate.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
 
         beamEstimate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(estimation.this, beamEstimate.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
 

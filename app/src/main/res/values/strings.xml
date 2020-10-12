@@ -73,4 +73,13 @@
     <string name="no_of_windows">No. of Windows</string>
     <string name="doors_in_room">Doors in Room</string>
     <string name="windows2">Windows in Room</string>
+    <string name="steel_per_sq_ft">Steel per Sq Ft</string>
+    <string name="_4_5_kg">4.5 KG</string>
+    <string name="length_of_beam">Length of Beam</string>
+    <string name="width_of_beam">Width of Beam</string>
+    <string name="thickness_of_beam">Thickness of Beam</string>
+    <string name="_3_5_kg">3.5 KG</string>
+    <string name="length_of_lanter">Length of Lanter</string>
+    <string name="width_of_lanter">Width of Lanter</string>
+    <string name="thickness_of_lanter">Thickness of Lanter</string>
 </resources>

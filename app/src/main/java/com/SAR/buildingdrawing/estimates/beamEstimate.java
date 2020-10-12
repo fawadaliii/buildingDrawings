@@ -18,86 +18,76 @@ import android.widget.Toast;
 
 import com.SAR.buildingdrawing.R;
 
-public class paintEstimate extends AppCompatActivity {
+public class beamEstimate extends AppCompatActivity {
 
     private Toolbar toolbar;
 
-    private AppCompatEditText room_length;
-    private AppCompatEditText room_width;
-    private AppCompatEditText room_height;
-    private AppCompatEditText no_of_doors;
-    private AppCompatEditText no_of_windows;
+    private AppCompatEditText beam_length;
+    private AppCompatEditText beam_width;
+    private AppCompatEditText beam_thickness;
 
     private AppCompatButton calculate_btn;
 
-    private double roomLength;
-    private double roomWidth;
-    private double roomHeight;
-    private double noOfDoors = 1;
-    private double noOfWindows = 1;
+    private double beamLength;
+    private double beamWidth;
+    private double beamThickness;
 
-    private String bucketsRequired;
+    private String steelRequired;
+    private String cementBags;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paint_estimate);
+        setContentView(R.layout.activity_beam_estimate);
+
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Paint Estimation");
+        getSupportActionBar().setTitle("Beam Estimation");
 
-        room_length = findViewById(R.id.room_length);
-        room_width = findViewById(R.id.room_width);
-        room_height = findViewById(R.id.room_height);
-        no_of_doors = findViewById(R.id.no_of_doors);
-        no_of_windows = findViewById(R.id.no_of_windows);
+        beam_length = findViewById(R.id.beam_length);
+        beam_width = findViewById(R.id.beam_width);
+        beam_thickness = findViewById(R.id.beam_thickness);
 
         calculate_btn = findViewById(R.id.calculate_btn);
 
         calculate_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(room_length.getText().toString())){
-                    Toast.makeText(paintEstimate.this, "Room Length cannot be null",Toast.LENGTH_SHORT).show();
-                    room_length.requestFocus();
+                if(TextUtils.isEmpty(beam_length.getText().toString())){
+                    Toast.makeText(beamEstimate.this, "Beam Length cannot be null",Toast.LENGTH_SHORT).show();
+                    beam_length.requestFocus();
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
                     return;
                 }
 
-                if(TextUtils.isEmpty(room_width.getText().toString())){
-                    Toast.makeText(paintEstimate.this, "Room Width cannot be null",Toast.LENGTH_SHORT).show();
-                    room_width.requestFocus();
+                if(TextUtils.isEmpty(beam_width.getText().toString())){
+                    Toast.makeText(beamEstimate.this, "Beam Width cannot be null",Toast.LENGTH_SHORT).show();
+                    beam_width.requestFocus();
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
                     return;
                 }
 
-                if(TextUtils.isEmpty(room_height.getText().toString())){
-                    Toast.makeText(paintEstimate.this, "Room Height cannot be null",Toast.LENGTH_SHORT).show();
-                    room_height.requestFocus();
+                if(TextUtils.isEmpty(beam_thickness.getText().toString())){
+                    Toast.makeText(beamEstimate.this, "Beam Thickness cannot be null",Toast.LENGTH_SHORT).show();
+                    beam_thickness.requestFocus();
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
                     return;
                 }
 
-                roomLength = Double.parseDouble(room_length.getText().toString());
-                roomWidth = Double.parseDouble(room_width.getText().toString());
-                roomHeight = Double.parseDouble(room_height.getText().toString());
-                if(!TextUtils.isEmpty(no_of_doors.getText().toString())){
-                    noOfDoors = Double.parseDouble(no_of_doors.getText().toString());
-                }
-                if(!TextUtils.isEmpty(no_of_windows.getText().toString())){
-                    noOfWindows = Double.parseDouble(no_of_windows.getText().toString());
-                }
+                beamLength = Double.parseDouble(beam_length.getText().toString());
+                beamWidth = Double.parseDouble(beam_width.getText().toString());
+                beamThickness = Double.parseDouble(beam_thickness.getText().toString());
 
-                double areaOfRoom = (roomLength*roomHeight + roomWidth*roomHeight)*2 - (28*noOfDoors + 20*noOfWindows);
-                //28 and 20 are are of 1 door and 1 window respectively
+                double areaOfBeam = beamLength*beamWidth;
 
-                bucketsRequired = Math.ceil(areaOfRoom/250)+"";
+                steelRequired = Math.ceil(areaOfBeam*3.5)+""; //3.5 is the value of kg per sq ft of steel
+                cementBags = Math.ceil((areaOfBeam*0.5*beamThickness/12))+"";
 
-                LayoutInflater inflater = (LayoutInflater) paintEstimate.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                LayoutInflater inflater = (LayoutInflater) beamEstimate.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 final View formElementsView = inflater.inflate(R.layout.required_material_alert,null, false);
 
                 final AppCompatTextView brick_required_label = formElementsView.findViewById(R.id.brick_required_label);
@@ -105,17 +95,15 @@ public class paintEstimate extends AppCompatActivity {
                 final AppCompatTextView cement_bags_required_label = formElementsView.findViewById(R.id.cement_bags_required_label);
                 final AppCompatTextView cement_bags_required = formElementsView.findViewById(R.id.cement_bags_required);
 
-                brick_required_label.setVisibility(View.GONE);
-                bricks_required.setVisibility(View.GONE);
-                cement_bags_required_label.setText("Paint Buckets required");
-                cement_bags_required.setText(bucketsRequired);
 
-                new AlertDialog.Builder(paintEstimate.this).setView(formElementsView)
+                brick_required_label.setText("Steel Required");
+                bricks_required.setText(steelRequired + " KG");
+                cement_bags_required.setText(cementBags);
+
+                new AlertDialog.Builder(beamEstimate.this).setView(formElementsView)
                         .setTitle("Material Estimate")
                         .setPositiveButton("Ok", null).show();
 
-                noOfDoors = 1;
-                noOfWindows = 1;
             }
         });
 
