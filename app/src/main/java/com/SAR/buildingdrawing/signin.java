@@ -215,7 +215,8 @@ public class signin extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                moveTaskToBack(true);
+                finish();
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
 
             default:
@@ -225,7 +226,8 @@ public class signin extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        moveTaskToBack(true);
+        finish();
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void hideKeyboard(View view) {

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".estimates.wallTilesEstimate"
+    android:background="#f2f2f2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#fff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f2f2f2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/topLayout"
+                android:background="#fff">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/assumptions"
+                    android:id="@+id/assumptions_label"
+                    android:gravity="center_vertical"
+                    android:textSize="12pt"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginTop="16pt"
+                    android:layout_marginBottom="4pt"
+                    android:layout_marginHorizontal="4pt"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tile_size"
+                    android:textSize="8pt"
+                    android:id="@+id/brick_size_label"
+                    android:layout_below="@+id/assumptions_label"
+                    android:gravity="center_vertical"
+                    android:layout_marginVertical="4pt"
+                    android:layout_marginHorizontal="4pt"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight_of_cement_bag"
+                    android:textSize="8pt"
+                    android:id="@+id/weight_of_cement_label"
+                    android:layout_below="@+id/brick_size_label"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4pt"
+                    android:layout_marginBottom="8pt"
+                    android:layout_marginStart="4pt"
+                    android:layout_marginEnd="16pt"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_18inch_12inch"
+                    android:id="@+id/brick_size"
+                    android:textSize="8pt"
+                    android:layout_toEndOf="@+id/weight_of_cement_label"
+                    android:textColor="#000"
+                    android:layout_below="@+id/assumptions_label"
+                    android:gravity="center_vertical"
+                    android:layout_marginVertical="4pt"
+                    android:layout_marginHorizontal="4pt"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_50_kg"
+                    android:textSize="8pt"
+                    android:id="@+id/weight_of_cement"
+                    android:layout_toEndOf="@+id/weight_of_cement_label"
+                    android:textColor="#000"
+                    android:layout_below="@+id/brick_size"
+                    android:gravity="center_vertical"
+                    android:layout_marginVertical="4pt"
+                    android:layout_marginHorizontal="4pt"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/secondLayout"
+                android:layout_below="@+id/topLayout"
+                android:layout_marginTop="2pt"
+                android:background="#fff">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dimensions"
+                    android:id="@+id/dimensions_label"
+                    android:gravity="center_vertical"
+                    android:textSize="12pt"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginTop="8pt"
+                    android:layout_marginBottom="4pt"
+                    android:layout_marginHorizontal="4pt"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/room_length"
+                    android:textSize="10pt"
+                    android:id="@+id/room_length_label"
+                    android:layout_below="@+id/dimensions_label"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="7pt"
+                    android:layout_marginBottom="4pt"
+                    android:layout_marginStart="4pt"
+                    android:layout_marginEnd="16pt"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/room_width"
+                    android:textSize="10pt"
+                    android:id="@+id/room_width_label"
+                    android:layout_below="@+id/room_length_label"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="7pt"
+                    android:layout_marginBottom="4pt"
+                    android:layout_marginHorizontal="4pt"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/room_height"
+                    android:textSize="10pt"
+                    android:id="@+id/room_height_label"
+                    android:layout_below="@+id/room_width_label"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="7pt"
+                    android:layout_marginBottom="4pt"
+                    android:layout_marginHorizontal="4pt"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tile_length"
+                    android:textSize="10pt"
+                    android:id="@+id/brick_length_label"
+                    android:layout_below="@+id/room_height_label"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="7pt"
+                    android:layout_marginBottom="4pt"
+                    android:layout_marginHorizontal="4pt"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tw1"
+                    android:textSize="10pt"
+                    android:id="@+id/brick_width_label"
+                    android:layout_below="@+id/brick_length_label"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="7pt"
+                    android:layout_marginBottom="4pt"
+                    android:layout_marginHorizontal="4pt"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/room_length_Layout"
+                    android:layout_below="@+id/dimensions_label"
+                    android:layout_marginEnd="4pt"
+                    android:layout_marginTop="4pt"
+                    android:layout_marginBottom="4pt"
+                    android:padding="0pt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/room_length_label"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomEnd="0pt"
+                    app:boxCornerRadiusBottomStart="0pt"
+                    app:boxCornerRadiusTopEnd="0pt"
+                    app:boxCornerRadiusTopStart="0pt">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2pt"
+                        android:id="@+id/room_length"
+                        android:hint="@string/in_foot"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/room_width_Layout"
+                    android:layout_below="@+id/room_length_label"
+                    android:layout_marginEnd="4pt"
+                    android:layout_marginTop="4pt"
+                    android:layout_marginBottom="4pt"
+                    android:padding="0pt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/room_length_label"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomEnd="0pt"
+                    app:boxCornerRadiusBottomStart="0pt"
+                    app:boxCornerRadiusTopEnd="0pt"
+                    app:boxCornerRadiusTopStart="0pt">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2pt"
+                        android:id="@+id/room_width"
+                        android:hint="@string/in_foot"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/room_height_Layout"
+                    android:layout_below="@+id/room_width_label"
+                    android:layout_marginEnd="4pt"
+                    android:layout_marginTop="4pt"
+                    android:layout_marginBottom="4pt"
+                    android:padding="0pt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/room_length_label"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomEnd="0pt"
+                    app:boxCornerRadiusBottomStart="0pt"
+                    app:boxCornerRadiusTopEnd="0pt"
+                    app:boxCornerRadiusTopStart="0pt">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2pt"
+                        android:id="@+id/room_height"
+                        android:hint="@string/in_foot"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/brick_length_Layout"
+                    android:layout_below="@+id/room_height_label"
+                    android:layout_marginEnd="4pt"
+                    android:layout_marginTop="4pt"
+                    android:layout_marginBottom="4pt"
+                    android:padding="0pt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/room_length_label"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomEnd="0pt"
+                    app:boxCornerRadiusBottomStart="0pt"
+                    app:boxCornerRadiusTopEnd="0pt"
+                    app:boxCornerRadiusTopStart="0pt">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2pt"
+                        android:id="@+id/brick_length"
+                        android:hint="@string/in_inches"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/brick_width_Layout"
+                    android:layout_below="@+id/brick_length_label"
+                    android:layout_marginEnd="4pt"
+                    android:layout_marginTop="4pt"
+                    android:layout_marginBottom="4pt"
+                    android:padding="0pt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/room_length_label"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomEnd="0pt"
+                    app:boxCornerRadiusBottomStart="0pt"
+                    app:boxCornerRadiusTopEnd="0pt"
+                    app:boxCornerRadiusTopStart="0pt">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2pt"
+                        android:id="@+id/brick_width"
+                        android:hint="@string/in_inches"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/calculate_btn"
+                    android:layout_below="@+id/brick_width_Layout"
+                    android:layout_marginVertical="8pt"
+                    android:layout_marginHorizontal="40pt"
+                    android:text="@string/calculate"
+                    android:inputType="text"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:background="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

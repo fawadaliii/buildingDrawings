@@ -82,4 +82,11 @@
     <string name="length_of_lanter">Length of Lanter</string>
     <string name="width_of_lanter">Width of Lanter</string>
     <string name="thickness_of_lanter">Thickness of Lanter</string>
+    <string name="tile_size">Tile size</string>
+    <string name="_12inch_12inch">12inch/12inch</string>
+    <string name="tile_length">Tile Length</string>
+    <string name="tw1">Tile Width</string>
+    <string name="_18inch_12inch">18inch/12inch</string>
+    <string name="plaster_thickness">Plaster Thickness</string>
+    <string name="_1_2_inch">1/2 inch</string>
 </resources>

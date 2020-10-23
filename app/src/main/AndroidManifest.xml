@@ -17,7 +17,11 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".estimates.lanterEstimate"></activity>
+        <activity android:name=".estimates.plasterWall"></activity>
+        <activity android:name=".estimates.plasterCeiling" />
+        <activity android:name=".estimates.wallTilesEstimate" />
+        <activity android:name=".estimates.floorTilesEstimate" />
+        <activity android:name=".estimates.lanterEstimate" />
         <activity android:name=".estimates.beamEstimate" />
         <activity android:name=".estimates.paintEstimate" />
         <activity android:name=".estimates.bricksEstimate" />

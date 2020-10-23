@@ -12,8 +12,12 @@ import android.view.View;
 
 import com.SAR.buildingdrawing.estimates.beamEstimate;
 import com.SAR.buildingdrawing.estimates.bricksEstimate;
+import com.SAR.buildingdrawing.estimates.floorTilesEstimate;
 import com.SAR.buildingdrawing.estimates.lanterEstimate;
 import com.SAR.buildingdrawing.estimates.paintEstimate;
+import com.SAR.buildingdrawing.estimates.plasterCeiling;
+import com.SAR.buildingdrawing.estimates.plasterWall;
+import com.SAR.buildingdrawing.estimates.wallTilesEstimate;
 import com.SAR.buildingdrawing.models.common;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -96,28 +100,36 @@ public class estimation extends AppCompatActivity implements BottomNavigationVie
         floorTilesEstimate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(estimation.this, floorTilesEstimate.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
 
         wallTilesEstimate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(estimation.this, wallTilesEstimate.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
 
         plasterCeilingEstimate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(estimation.this, plasterCeiling.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
 
         plasterWallEstimate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(estimation.this, plasterWall.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
 
