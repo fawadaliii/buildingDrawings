@@ -89,4 +89,92 @@
     <string name="_18inch_12inch">18inch/12inch</string>
     <string name="plaster_thickness">Plaster Thickness</string>
     <string name="_1_2_inch">1/2 inch</string>
+    <string name="ground_floor">Ground Floor</string>
+    <string name="bed_rooms">Bed Rooms</string>
+    <string name="tv_lounge">TV Lounge</string>
+    <string name="drawing_rooms">Drawing Rooms</string>
+    <string name="bathrooms">Bathrooms</string>
+    <string name="kitchens">Kitchens</string>
+    <string name="estimate_building_cost">Estimate Building Cost</string>
+    <string name="house_type">House Type</string>
+    <string name="plot_size">Plot Size</string>
+    <string name="courtyard_space">Courtyard Space</string>
+    <string name="marla_square_feet">Marla Square Feet</string>
+    <string name="building_storeys">Building Storeys</string>
+    <string name="in_marla">In marla</string>
+    <string name="full_house_estimation">Full House Estimation</string>
+    <string name="material_required">Material Required</string>
+    <string name="cement">CEMENT</string>
+    <string name="sand">SAND</string>
+    <string name="bricks">BRICKS</string>
+    <string name="aggregate">AGGREGATE</string>
+    <string name="steel">STEEL</string>
+    <string name="paint">PAINT</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="rs_5712000">RS. 5712000 /-</string>
+
+    <string-array name="bedrooms">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="TVLounge">
+        <item>1</item>
+        <item>0</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="drawingRooms">
+        <item>1</item>
+        <item>0</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="bathrooms">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="kitchens">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="houseType">
+        <item>Normal</item>
+        <item>Luxury</item>
+    </string-array>
+
+    <string-array name="marlaSqFt">
+        <item>272</item>
+        <item>250</item>
+        <item>225</item>
+    </string-array>
+
+    <string-array name="storeys">
+        <item>Single</item>
+        <item>Double</item>
+        <item>Triple</item>
+    </string-array>
 </resources>
+
+

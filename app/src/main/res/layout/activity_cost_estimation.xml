@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".costEstimation">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/material_required"
+                android:id="@+id/details_label"
+                android:gravity="center_vertical"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginTop="12pt"
+                android:layout_marginBottom="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cement"
+                android:id="@+id/cement_label"
+                android:layout_below="@+id/details_label"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sand"
+                android:id="@+id/sand_label"
+                android:layout_below="@+id/cement_label"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bricks"
+                android:id="@+id/bricks_label"
+                android:layout_below="@+id/sand_label"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aggregate"
+                android:id="@+id/aggregate_label"
+                android:layout_below="@+id/bricks_label"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginStart="4pt"
+                android:layout_marginEnd="16pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/steel"
+                android:id="@+id/steel_label"
+                android:layout_below="@+id/aggregate_label"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paint"
+                android:id="@+id/paint_label"
+                android:layout_below="@+id/steel_label"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cement"
+                android:id="@+id/cement"
+                android:layout_below="@+id/details_label"
+                android:layout_toEndOf="@+id/aggregate_label"
+                android:textColor="#000"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sand"
+                android:id="@+id/sand"
+                android:layout_below="@+id/cement_label"
+                android:layout_toEndOf="@+id/aggregate_label"
+                android:textColor="#000"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bricks"
+                android:id="@+id/bricks"
+                android:layout_below="@+id/sand_label"
+                android:layout_toEndOf="@+id/aggregate_label"
+                android:textColor="#000"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aggregate"
+                android:id="@+id/aggregate"
+                android:layout_below="@+id/bricks_label"
+                android:layout_toEndOf="@+id/aggregate_label"
+                android:textColor="#000"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/steel"
+                android:id="@+id/steel"
+                android:layout_below="@+id/aggregate_label"
+                android:layout_toEndOf="@+id/aggregate_label"
+                android:textColor="#000"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paint"
+                android:id="@+id/paint"
+                android:layout_below="@+id/steel_label"
+                android:layout_toEndOf="@+id/aggregate_label"
+                android:textColor="#000"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:text="@string/paint"
+                android:id="@+id/space"
+                android:layout_below="@+id/paint"
+                android:textColor="#f2f2f2"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="8pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_cost"
+                android:id="@+id/total_cost_label"
+                android:layout_below="@+id/space"
+                android:gravity="center_vertical"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginTop="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs_5712000"
+                android:id="@+id/total_cost"
+                android:textSize="16pt"
+                android:textStyle="italic"
+                android:layout_below="@+id/total_cost_label"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4pt"
+                android:layout_marginBottom="8pt"
+                android:layout_marginHorizontal="4pt"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

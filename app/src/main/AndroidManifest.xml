@@ -17,7 +17,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".estimates.plasterWall"></activity>
+        <activity android:name=".costEstimation"></activity>
+        <activity android:name=".estimates.plasterWall" />
         <activity android:name=".estimates.plasterCeiling" />
         <activity android:name=".estimates.wallTilesEstimate" />
         <activity android:name=".estimates.floorTilesEstimate" />
@@ -36,7 +37,9 @@
             android:name=".signin"
             android:screenOrientation="portrait" />
         <activity android:name=".signup" />
-        <activity android:name=".home" />
+        <activity
+            android:name=".home"
+            android:screenOrientation="portrait" />
         <activity android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

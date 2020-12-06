@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f2f2f2"
+    android:layout_marginTop="4pt"
+    android:layout_marginBottom="4pt"
+    android:layout_marginHorizontal="4pt">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardview_cost_estimation"
+        android:layout_gravity="center"
+        app:cardCornerRadius="3pt"
+        app:cardMaxElevation="1pt"
+        app:cardElevation="0.5pt"
+        android:background="#ffffff"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/aboveRL">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ground_floor"
+                android:id="@+id/floor_name"
+                android:textSize="11pt"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:layout_marginHorizontal="4pt"
+                android:layout_marginTop="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bed_rooms"
+                android:textSize="10.5pt"
+                android:id="@+id/bed_rooms"
+                android:layout_below="@+id/floor_name"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4pt"
+                android:layout_marginBottom="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_lounge"
+                android:textSize="10.5pt"
+                android:id="@+id/tv_lounge"
+                android:layout_below="@+id/bed_rooms"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4pt"
+                android:layout_marginBottom="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drawing_rooms"
+                android:textSize="10.5pt"
+                android:id="@+id/drawing_rooms"
+                android:layout_below="@+id/tv_lounge"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4pt"
+                android:layout_marginBottom="4pt"
+                android:layout_marginStart="4pt"
+                android:layout_marginEnd="16pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bathrooms"
+                android:textSize="10.5pt"
+                android:id="@+id/bathrooms"
+                android:layout_below="@+id/drawing_rooms"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4pt"
+                android:layout_marginBottom="4pt"
+                android:layout_marginHorizontal="4pt"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kitchens"
+                android:textSize="10.5pt"
+                android:id="@+id/kitchens"
+                android:layout_below="@+id/bathrooms"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4pt"
+                android:layout_marginBottom="4pt"
+                android:layout_marginStart="4pt"
+                android:layout_marginEnd="4pt"/>
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/selectBedrooms"
+                android:layout_below="@+id/floor_name"
+                android:layout_toEndOf="@+id/drawing_rooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_spinner_floors"
+                android:layout_marginHorizontal="4pt"
+                android:layout_marginVertical="4pt"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/bedrooms"
+                android:tooltipText="@string/bed_rooms" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/selectTVLounge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bed_rooms"
+                android:layout_marginHorizontal="4pt"
+                android:layout_marginVertical="4pt"
+                android:layout_toEndOf="@+id/drawing_rooms"
+                android:background="@drawable/gradient_spinner_floors"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/TVLounge"
+                android:tooltipText="@string/tv_lounge" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/selectDrawingRooms"
+                android:layout_below="@+id/tv_lounge"
+                android:layout_toEndOf="@+id/drawing_rooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_spinner_floors"
+                android:layout_marginHorizontal="4pt"
+                android:layout_marginVertical="4pt"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/drawingRooms"
+                android:tooltipText="@string/drawing_rooms" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/selectBathrooms"
+                android:layout_below="@+id/drawing_rooms"
+                android:layout_toEndOf="@+id/drawing_rooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_spinner_floors"
+                android:layout_marginHorizontal="4pt"
+                android:layout_marginVertical="4pt"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/bathrooms"
+                android:tooltipText="@string/bathrooms" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/selectKitchens"
+                android:layout_below="@+id/bathrooms"
+                android:layout_toEndOf="@+id/drawing_rooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_spinner_floors"
+                android:layout_marginHorizontal="4pt"
+                android:layout_marginVertical="4pt"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/kitchens"
+                android:tooltipText="@string/bathrooms" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
