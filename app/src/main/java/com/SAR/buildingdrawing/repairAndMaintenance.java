@@ -224,12 +224,12 @@ public class repairAndMaintenance extends AppCompatActivity implements BottomNav
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
 
-            case R.id.build_house_nav:
-                //
-//                Intent intent1 = new Intent(home.this, .class);
-//                startActivity(intent1);
-//                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                return true;
+//            case R.id.build_house_nav:
+//                //
+////                Intent intent1 = new Intent(home.this, .class);
+////                startActivity(intent1);
+////                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+//                return true;
 
             case R.id.estimation_nav:
                 //
