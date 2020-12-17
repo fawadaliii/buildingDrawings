@@ -50,7 +50,7 @@ public class account extends AppCompatActivity implements BottomNavigationView.O
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         android.view.Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(4);
+        MenuItem menuItem = menu.getItem(3);
         menuItem.setChecked(true);
 
         toolbar = findViewById(R.id.toolbar);

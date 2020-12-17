@@ -44,7 +44,7 @@ public class estimation extends AppCompatActivity implements BottomNavigationVie
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         android.view.Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(2);
+        MenuItem menuItem = menu.getItem(1);
         menuItem.setChecked(true);
 
         toolbar = findViewById(R.id.toolbar);
