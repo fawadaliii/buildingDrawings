@@ -112,6 +112,7 @@
     <string name="paint">PAINT</string>
     <string name="total_cost">Total Cost</string>
     <string name="rs_5712000">RS. 5712000 /-</string>
+    <string name="item">Item</string>
 
     <string-array name="bedrooms">
         <item>1</item>
@@ -162,6 +163,20 @@
     <string-array name="houseType">
         <item>Normal</item>
         <item>Luxury</item>
+    </string-array>
+
+    <string-array name="houseGarage">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="houseArea">
+        <item>7</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="houseFloor">
+        <item>1</item>
+        <item>2</item>
     </string-array>
 
     <string-array name="marlaSqFt">

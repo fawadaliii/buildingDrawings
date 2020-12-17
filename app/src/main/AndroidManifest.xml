@@ -17,7 +17,10 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".costEstimation"></activity>
+        <activity android:name=".PreviewImageActivity"></activity>
+        <activity android:name=".ThreeDModel.ModelActivity"></activity>
+        <activity android:name=".ThreeDActivity"></activity>
+        <activity android:name=".costEstimation" />
         <activity android:name=".estimates.plasterWall" />
         <activity android:name=".estimates.plasterCeiling" />
         <activity android:name=".estimates.wallTilesEstimate" />

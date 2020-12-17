@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="markArray5">
+        <item>10000</item>
+        <item>1000000</item>
+    </string-array>
+    <string-array name="menu_items">
+        <item>Load Model</item>
+        <!--<item>Models</item>-->
+        <item>Demo</item>
+        <item>Help</item>
+        <item>About</item>
+        <!--<item>GitHub</item>-->
+        <item>Exit</item>
+    </string-array>
+</resources>

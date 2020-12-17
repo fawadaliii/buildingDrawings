@@ -4,5 +4,8 @@
     <color name="colorPrimaryDark">#221f3b</color>
     <color name="colorAccent">#6f4a8e</color>
     <color name="colorBackgroundBottomNavigation">#050505</color>
+    <color name="black">#050505</color>
     <color name="colorItemBottomNav">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="system_ui_scrim_dark">#40000000</color>
 </resources>
